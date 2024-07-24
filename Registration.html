@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+        }
+
+        header .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar .logo {
+            color: #fff;
+            font-weight: 600;
+            font-size: 2.1rem;
+            text-decoration: none;
+        }
+
+        .navbar .logo span {
+            color: #DEA945;
+        }
+
+        .navbar .menu-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .navbar a:hover {
+            color: #DEA945;
+        }
+
+        .container {
+            height: 100vh;
+            background-image: url("Page\ Website\ background\ Picture\.jpg");
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        #close-menu-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #hamburger-btn {
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+
+
+        .container {
+            min-height: 100vh;
+            background: #08071d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url("Page\ Website\ Background\ Picture.jpg") no-repeat center center/cover;
+        }
+
+        .container form {
+            width: 670px;
+            height: 670px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0, 5);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            /* backdrop-filter: blur(10px); */
+            flex-wrap: wrap;
+        }
+
+        .container form h1 {
+            color: #ffffff;
+            font-weight: 500px;
+            margin-top: 20px;
+            width: 500px;
+            text-align: center;
+        }
+
+        .container form input {
+            width: 290px;
+            height: 40px;
+            padding-left: 10px;
+            outline: none;
+            border: none;
+            font-size: 15px;
+            margin-bottom: 10px;
+            background: none;
+            border-bottom: 2px solid #ffffff;
+            color: #ffffff;
+        }
+
+        .container form input::placeholder {
+            color: rgb(255, 255, 255);
+        }
+
+        .container form #lastName,
+        .container form #mobile {
+            margin-left: 20px;
+        }
+
+        .container form h4 {
+            color: #ffffff;
+            font-weight: 300;
+            width: 600px;
+            margin-top: 20px;
+
+        }
+
+        .container form textarea {
+            background: none;
+            border: none;
+            border-bottom: 2px solid #ffffff;
+            color: #fff9f9;
+            font-weight: 200;
+            font-size: 15px;
+            padding: 10px;
+            outline: none;
+            min-width: 600px;
+            max-width: 600px;
+            min-height: 80px;
+            max-height: 80px;
+
+        }
+
+        textarea::-webkit-scrollbar {
+            width: 1em;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background-color: rgba(194, 194, 194, 0.713);
+        }
+
+        .container form #button {
+            border: none;
+            background: #fff;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 20px;
+            color: #333;
+            width: 100px;
+            padding: 0;
+            margin-right: 500px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .container form #button:hover {
+            opacity: 0.7;
+
+        }
+
+        #close-menu-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .container11 {
+            text-align: center;
+        }
+
+        #hamburger-btn {
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header {
+        padding: 10px;
+      }
+
+      header.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+      }
+      .container form {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            box-shadow: 20px 20px 50px rgba(0, 0, 0, 0, 5);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            margin-top: 100px;
+        }
+      .navbar .logo {
+        font-size: 1.7rem;
+      }
+
+
+      #hamburger-btn,
+      #close-menu-btn {
+        display: block;
+      }
+
+      .navbar .menu-links {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 70px 40px 0;
+        transition: left 0.2s ease;
+        backdrop-filter: blur(5px);
+      }
+
+      header.show-mobile-menu .navbar .menu-links {
+        left: 0;
+        backdrop-filter: blur(5px);
+      }
+
+      .navbar a {
+        color: #000;
+        backdrop-filter: blur(5px);
+      }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="MAGI LOGO.jpg">MAGI EL & IT Institute<span>.</span></a>
+            <ul class="menu-links">
+                <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+                <li><a href="MAGI Website (home).HTML">Home</a></li>
+                <li><a href="About.HTML">About</a></li>
+                <li><a href="Function.HTML">Functions</a></li>
+                <li><a href="MAGI Website Our Team.html">Our Team</a></li>
+                <li><a href="Student Review.HTML">Student Review</a></li>
+                <li><a href="Registration.html">Registration</a></li>
+            </ul>
+            <span id="hamburger-btn" class="material-symbols-outlined">menu</span>
+        </nav>
+    </header>
+    <div class="container">
+        <form action="MAGI half Registration Form.HTML">
+            <h1>Registration Form</h1>
+            <input type="text" id="First Name" placeholder="First Name" required>
+            <input type="text" id="Last Name" placeholder="Last Name" required>
+            <input type="date" id="date of birth" placeholder="Date Of Birth" required>
+            <input type="text" id="Place Of Birth" placeholder="Place Of Birth" required>
+            <input type="text" id="Qulification" placeholder="Qulification" required>
+            <input type="text" id="Name Of last School" placeholder="Name Of last School" required>
+            <input type="text" id="Name Of last Institute" placeholder="Name Of last Institute">
+            <input type="number" id="CNIC" placeholder="CNIC" required>
+            <input type="number" id="Mobile" placeholder="Mobile" required>
+            <input type="email" id="Email" placeholder="Email Address" required>
+            <input type="text" id="Residential Address:" placeholder="Residential Address:" required>
+            <input type="text" id="Guardian's Name" placeholder="Guardian's Name" required>
+            <input type="number" id="Guardian's Phone:" placeholder="Residential Phone Number:" required>
+            <input type="text" id="Mother Tongue:" placeholder="Mother Tongue:" required>
+            <hr />
+            <!-- <h4>Type Your Massage Here...</h4>
+            <textarea required></textarea> -->
+            <input type="submit" value="Next" id="button"
+                onclick="alert('Congratulations!Your half registration form is done')">
+        </form>
+    </div>
+    <div class="container11">
+        <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
+            <p>IS TO MAKE STUDENTS
+                Practically Educated! Register Now!<br />0300-3372679<br />Thank You.
+            </p>
+            <p class="mb-0">
+                <a href="#">Back to top</a><br />
+            <div class="container1">
+                <td style="padding:0 24px 36px 24px">
+                    <table border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff"
+                        style="background-color:#ffffff;border-radius:4px" style="align-items: center;">
+                        <tbody>
+                            <tr>
+                                <td style="padding-right:16px">
+                                    <a href="#" target="_blank" data-saferedirecturl="#">
+                                        <img src="https://ci3.googleusercontent.com/meips/ADKq_NaRf16UcwkD2dVty5nvfBDX60IWM6GVptI60MZ6oXWsvUGdaaFpdLYWgHesTVu-igMXJSaYFeAvEGDQTobn_z7ASfY-S5w3FJ7SVivkGKNX=s0-d-e1-ft#https://mail-assets.jobleads.de/social-icons/instagram.png"
+                                            alt="Instagram" border="0" width="24" height="24" class="CToWUd"
+                                            data-bit="iit">
+                                    </a>
+                                </td>
+                                <td style="padding-right:16px">
+                                    <a href="http://l.email.jobleads.com/rts/go2.aspx?h=2474764&amp;tp=i-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3&amp;x=85000a87796e6dbac8c2ec85f7823513%7c2872191%7c2339136722&amp;hp2=c675405e040ec2641725a2ce7ec0cbaf1c8a4a6261bf1a47d57d93e57ad6ecc1"
+                                        target="_blank"
+                                        data-saferedirecturl="https://www.google.com/url?q=http://l.email.jobleads.com/rts/go2.aspx?h%3D2474764%26tp%3Di-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3%26x%3D85000a87796e6dbac8c2ec85f7823513%257c2872191%257c2339136722%26hp2%3Dc675405e040ec2641725a2ce7ec0cbaf1c8a4a6261bf1a47d57d93e57ad6ecc1&amp;source=gmail&amp;ust=1708720285750000&amp;usg=AOvVaw0qCi8TkJXEvd_bvBJqjwP8">
+                                        <img src="https://ci3.googleusercontent.com/meips/ADKq_Nb6uPvVOQAimhomk9hRdMBtjEca6cyczG33zFKKG0VqL87DLS5Fw_O-rEvPPu8XSgLONyUa5ybBorMT33zKIwnW3zioatK__97dZMsg_g=s0-d-e1-ft#https://mail-assets.jobleads.de/social-icons/youtube.png"
+                                            alt="Youtube" border="0" width="24" height="24" class="CToWUd"
+                                            data-bit="iit">
+                                    </a>
+                                </td>
+                                <td style="padding-right:16px">
+                                    <a href="http://l.email.jobleads.com/rts/go2.aspx?h=2474767&amp;tp=i-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3&amp;x=85000a87796e6dbac8c2ec85f7823513%7c2872191%7c2339136722&amp;hp2=981808b397d58097b316ad98b334825ff69f84f05584919dc127c44c217842d3"
+                                        target="_blank"
+                                        data-saferedirecturl="https://www.google.com/url?q=http://l.email.jobleads.com/rts/go2.aspx?h%3D2474767%26tp%3Di-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3%26x%3D85000a87796e6dbac8c2ec85f7823513%257c2872191%257c2339136722%26hp2%3D981808b397d58097b316ad98b334825ff69f84f05584919dc127c44c217842d3&amp;source=gmail&amp;ust=1708720285750000&amp;usg=AOvVaw3hcZbbEcQg4LE8nHEThE7k">
+                                        <img src="https://ci3.googleusercontent.com/meips/ADKq_NYnryWq9FBDvWtRv8koNk2EAku4G6MmxjLBEBpzllUxHJt-TJ5TaqGdLSnk6MtDm6kAZA-gXv-3hAhT_GMOV23BosggVfCfTM_fNWCuHuQ=s0-d-e1-ft#https://mail-assets.jobleads.de/social-icons/facebook.png"
+                                            alt="Facebook" border="0" width="24" height="24" class="CToWUd"
+                                            data-bit="iit">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="http://l.email.jobleads.com/rts/go2.aspx?h=2474770&amp;tp=i-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3&amp;x=85000a87796e6dbac8c2ec85f7823513%7c2872191%7c2339136722&amp;hp2=1c037c4fd05d7fcebcaf0809954c86a9cc505f7416e752ca10eb5e40d9624124"
+                                        target="_blank"
+                                        data-saferedirecturl="https://www.google.com/url?q=http://l.email.jobleads.com/rts/go2.aspx?h%3D2474770%26tp%3Di-16D9-Q1e-C3Bf-2YImJe-3I-18A55-1c-lA4GraOqmx-1PcPI3%26x%3D85000a87796e6dbac8c2ec85f7823513%257c2872191%257c2339136722%26hp2%3D1c037c4fd05d7fcebcaf0809954c86a9cc505f7416e752ca10eb5e40d9624124&amp;source=gmail&amp;ust=1708720285750000&amp;usg=AOvVaw20umDALYaUrKqYfdq_TIZO">
+                                        <img src="https://ci3.googleusercontent.com/meips/ADKq_NYDxslM0NNyNpqmavFkdkXlflQjPELr4RJQjImr6pfgbzWZCMPnCuOD4Qpu1c3NUORUz5ACa4fzh5mhS7xz4JPrOOU5xfYcBQWoLKz0DUk=s0-d-e1-ft#https://mail-assets.jobleads.de/social-icons/linkedin.png"
+                                            alt="Linkedin" border="0" width="24" height="24" class="CToWUd"
+                                            data-bit="iit">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </div>
+            </p>
+        </footer>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        const header = document.querySelector("header");
+        const hamburgerBtn = document.querySelector("#hamburger-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+
+        hamburgerBtn.addEventListener("click", () => header.classList.toggle("show-mobile-menu"));
+
+
+        closeMenuBtn.addEventListener("click", () => hamburgerBtn.click());
+    </script>
+</body>
+
+</html>
